@@ -1,0 +1,8 @@
+package com.example.drivewatch.core.usecase;
+
+import com.example.drivewatch.core.domain.RegisterDomain;
+
+public interface UpdateRegisterUseCase {
+
+    public RegisterDomain update(String id, RegisterDomain registerDomain);
+}
