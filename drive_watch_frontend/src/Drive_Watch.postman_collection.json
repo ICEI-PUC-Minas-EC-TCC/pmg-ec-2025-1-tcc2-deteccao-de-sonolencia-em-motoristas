@@ -1,0 +1,338 @@
+{
+	"info": {
+		"_postman_id": "29ebd454-7b60-4315-a1ee-f0bc0f966ace",
+		"name": "Drive Watch",
+		"schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json",
+		"_exporter_id": "22095107"
+	},
+	"item": [
+		{
+			"name": "Company",
+			"item": [
+				{
+					"name": "Company - create",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"name\": \"Empresa Teste 02\",\r\n    \"email\": \"empresa@gmail.com\",\r\n    \"contract\": \"contractpdf.com.br\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "http://localhost:8080/api/v1/company"
+					},
+					"response": []
+				},
+				{
+					"name": "Company - getAll",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": "http://localhost:8080/api/v1/company/getAll"
+					},
+					"response": []
+				},
+				{
+					"name": "Company - get",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": "http://localhost:8080/api/v1/company/2"
+					},
+					"response": []
+				},
+				{
+					"name": "Company - update",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"name\": \"Empresa Teste\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "http://localhost:8080/api/v1/company/2"
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Device",
+			"item": [
+				{
+					"name": "Device - create",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"idCompany\": \"2\",\r\n    \"plate\": \"ABC123\",\r\n    \"version\": \"1.0\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "http://localhost:8080/api/v1/device"
+					},
+					"response": []
+				},
+				{
+					"name": "Device - get",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": "http://localhost:8080/api/v1/device/1"
+					},
+					"response": []
+				},
+				{
+					"name": "Device - getAll",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "user-id",
+								"value": "1",
+								"disabled": true
+							}
+						],
+						"url": "http://localhost:8080/api/v1/device"
+					},
+					"response": []
+				},
+				{
+					"name": "Device - update",
+					"request": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "user-id",
+								"value": "1",
+								"disabled": true
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"version\": \"2.0\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "http://localhost:8080/api/v1/device/1"
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Phone",
+			"item": [
+				{
+					"name": "Device - create",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "user-id",
+								"value": "1",
+								"disabled": true
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"idDevice\": \"1\",\r\n    \"areaCode\": \"21\",\r\n    \"phoneNumber\": \"123456789\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "http://localhost:8080/api/v1/phone"
+					},
+					"response": []
+				},
+				{
+					"name": "Phone - get",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": "http://localhost:8080/api/v1/phone/1"
+					},
+					"response": []
+				},
+				{
+					"name": "Phone- getByIdDevice",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": "http://localhost:8080/api/v1/phone/device/1"
+					},
+					"response": []
+				},
+				{
+					"name": "Company - update",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"areaCode\": \"31\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "http://localhost:8080/api/v1/phone/1"
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Register",
+			"item": [
+				{
+					"name": "Register - create",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "user-id",
+								"value": "1",
+								"disabled": true
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"idDevice\": \"1\",\r\n    \"image\": \"link da imagem\",\r\n    \"type\": \"SLEEPING\",\r\n    \"occurrenceDate\": \"2024-01-01\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "http://localhost:8080/api/v1/register"
+					},
+					"response": []
+				},
+				{
+					"name": "Register - get",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": "http://localhost:8080/api/v1/register/1"
+					},
+					"response": []
+				},
+				{
+					"name": "Register - getAll",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": "http://localhost:8080/api/v1/register"
+					},
+					"response": []
+				},
+				{
+					"name": "Register - getAllByIdDevice",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": "http://localhost:8080/api/v1/register/device/1"
+					},
+					"response": []
+				},
+				{
+					"name": "Register - update",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"image\": \"link da imagem abc\",\r\n    \"occurrenceDate\": \"2024-01-02\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "http://localhost:8080/api/v1/register/1"
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Address",
+			"item": [
+				{
+					"name": "Address - create",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"idCompany\": \"2\",\r\n    \"zipCode\": \"12345678\",\r\n    \"street\": \"Rua A\",\r\n    \"number\": 1,\r\n    \"neighborhood\": \"Bairro A\",\r\n    \"city\": \"Belo Horizonte\",\r\n    \"state\": \"MG\",\r\n    \"country\": \"Brasil\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "http://localhost:8080/api/v1/address"
+					},
+					"response": []
+				},
+				{
+					"name": "Address - getByCompanyId",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": "http://localhost:8080/api/v1/address/company/2"
+					},
+					"response": []
+				},
+				{
+					"name": "Address - get",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": "http://localhost:8080/api/v1/address/102"
+					},
+					"response": []
+				},
+				{
+					"name": "Address - update",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"street\": \"Rua A teste\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "http://localhost:8080/api/v1/address/102"
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}

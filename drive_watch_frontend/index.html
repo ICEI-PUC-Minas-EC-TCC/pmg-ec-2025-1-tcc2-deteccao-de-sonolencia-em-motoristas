@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+        <title>Drivewatch</title>
+        <meta name="author" content="Driverwatch Team">
+        <meta name="description" content="Driverwatch is an PISH project for the Computer Engineering course">
+        <!-- Include Bootstrap Icons -->
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.2/font/bootstrap-icons.min.css">
+
+        <!-- Styles -->
+        <link rel="icon" href="/drivewatch.png">
+        <style>
+            #loadingOverlay{
+                width: 100%;
+                height: 100%;
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                justify-content: center;
+                position: absolute;
+                background-color: #182840;
+                color: white;
+                font-family: Arial, Helvetica, sans-serif;
+                font-size: large;
+            }
+            #indexLoading{
+                width: 100px;
+                height: 100px;
+                user-select: none;
+                -moz-user-select: none;
+                -webkit-user-select: none;
+                -ms-user-select: none;
+
+                animation: rodaI 2s infinite linear;
+            }
+            @keyframes rodaI{
+                0% {
+                transform: rotate(0);
+                }
+                100% {
+                    transform: rotate(360deg);
+                }
+            }
+        </style>
+    </head>
+    <noscript>
+        <div style="display: absolute; top: 45%; left: 45%; z-index: 10; border: 1px solid #000000; padding: 10px;" class="semjs">
+            <p style="color: #921616;">Essa aplicação necessita de Javascript para funcionar!<br> Ative o Javascript!</p>
+        </div>
+    </noscript>
+    <body class="antialiased">
+        <div id="loadingOverlay">
+            <img id="indexLoading" src="/drivewatch.png" />
+            <h1>Carregando...</h1>
+            <p><bold>Você Sabia?</bold><br>Com Drivewatch seus motoristas estão muito mais seguros!</p>
+        </div>
+        <div id="app">
+
+        </div>
+        <script type="module" src="/src/app.js"></script>
+    </body>
+</html>

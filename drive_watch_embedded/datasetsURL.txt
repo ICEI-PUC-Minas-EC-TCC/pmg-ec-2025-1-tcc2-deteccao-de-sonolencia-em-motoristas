@@ -1,0 +1,3 @@
+https://www.kaggle.com/datasets/rakibuleceruet/drowsiness-prediction-dataset/data
+https://www.kaggle.com/datasets/dheerajperumandla/drowsiness-dataset
+https://www.kaggle.com/datasets/nexuswho/drowsiness-detection

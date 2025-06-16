@@ -1,0 +1,28 @@
+@import "~boots/scss/bootstrap.scss";
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@500&display=swap');
+
+*{
+    font-family: 'Poppins', sans-serif;
+    margin: 0;
+    padding: 0;
+    scroll-behavior: smooth;
+
+    --cor-branca: #f0f1ec;
+    /*--cor-universo: #182840;*/
+    --cor-universo: #20457c;
+    --cor-universo-escuro: #061833;
+    --cor-universo-claro: #3e4c59;
+    --cor-universo-medio: #3a5065;
+    --cor-dourado-escuro: #cca478;
+    --cor-dourado-claro: #d4a930;
+}
+body{
+    background-color: var(--cor-branca);
+    color: #000000;
+}
+.negrito{
+    font-weight: bold;
+}
+.isLink{
+    color: var(--cor-dourado-claro);
+}
