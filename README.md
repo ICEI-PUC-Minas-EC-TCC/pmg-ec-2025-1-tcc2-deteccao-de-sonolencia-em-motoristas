@@ -10,7 +10,7 @@
 ### Orientador
 - Felipe Augusto Lara Soares
 
-### Scbre o projeto
+### Sobre o projeto
 Drive Watch é um sistema embarcado desenvolvido como Trabalho de Conclusão de Curso (TCC) em Engenharia de Computação na PUC Minas. O objetivo é detectar sinais de sonolência em motoristas em tempo real, utilizando um Raspberry Pi com câmera e técnicas de visão computacional e inteligência artificial.
 
 ### Execução
