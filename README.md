@@ -1,19 +1,19 @@
 # Drive Watch - Um Sistema Embarcado com Inteligência Artificial para Monitoramento em Tempo Real e Detecção de Sonolência em Motoristas
 
-### Autores
+## Autores
 - Christian David Costa Vieira
 - Cristian Fernandes Sena
 - Dayane Gabriela Santos Cordeiro
 - Gabriel Henrique Braz
 - Guilherme Marcos Pereira Gonçalves
 
-### Orientador
+## Orientador
 - Felipe Augusto Lara Soares
 
-### Sobre o projeto
+## Sobre o projeto
 Drive Watch é um sistema embarcado desenvolvido como Trabalho de Conclusão de Curso (TCC) em Engenharia de Computação na PUC Minas. O objetivo é detectar sinais de sonolência em motoristas em tempo real, utilizando um Raspberry Pi com câmera e técnicas de visão computacional e inteligência artificial.
 
-### Execução
+## Execução
 A seguir encontram-se os passos para executar cada parte do projeto:
 
 ### Pré requisitos
